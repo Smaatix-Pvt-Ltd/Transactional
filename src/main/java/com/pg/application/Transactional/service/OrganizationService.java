@@ -1,9 +1,12 @@
 package com.pg.application.Transactional.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.pg.application.Transactional.entity.Organization;
+import com.pg.application.Transactional.entity.User;
 import com.pg.application.Transactional.repositatory.OrganizationRepository;
 
 @Service
@@ -29,4 +32,9 @@ public class OrganizationService {
 
         return "Organization created successfully";
     }
+
+	public List<Organization> getAllUsers() {
+		
+		return organizationRepository.findAll();
+	}
 }

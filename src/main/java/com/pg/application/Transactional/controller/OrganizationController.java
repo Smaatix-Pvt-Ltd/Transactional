@@ -1,9 +1,13 @@
 package com.pg.application.Transactional.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import com.pg.application.Transactional.dto.OrganizationRequest;
+import com.pg.application.Transactional.entity.Organization;
+import com.pg.application.Transactional.entity.User;
 import com.pg.application.Transactional.service.OrganizationService;
 
 @CrossOrigin
@@ -12,6 +16,11 @@ public class OrganizationController {
 
 	@Autowired
 	private OrganizationService organizationService;
+	
+	@GetMapping
+    public List<Organization> getAllUsers() {
+        return organizationService.getAllUsers();
+    }
 
 	@PostMapping("/create")
 	public String createOrganization(@RequestBody @Validated OrganizationRequest request) {
