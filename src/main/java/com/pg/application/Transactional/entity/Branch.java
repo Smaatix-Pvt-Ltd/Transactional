@@ -13,13 +13,13 @@ public class Branch {
     @Id
     @GeneratedValue
     private int branch_id;
-    private String Branch_Name;
+    private String BranchName;
    
     private String Occupancy;
-    private int no_of_rooms;
+    private int noOfRooms;
     private String Address;
-    private int total_occupied_rooms;
-    private int empty_rooms;
+    private int totalOccupiedRooms;
+    private int emptyRooms;
     private LocalTime openTime;
     private LocalTime closeTime;
     
@@ -46,10 +46,10 @@ private int no_of_available_maid;
     
 
 	public int getNo_of_rooms() {
-	return no_of_rooms;
+	return noOfRooms;
 }
 public void setNo_of_rooms(int no_of_rooms) {
-	this.no_of_rooms = no_of_rooms;
+	this.noOfRooms = no_of_rooms;
 }
 public String getAddress() {
 	return Address;
@@ -58,16 +58,16 @@ public void setAddress(String address) {
 	Address = address;
 }
 public int getTotal_occupied_rooms() {
-	return total_occupied_rooms;
+	return totalOccupiedRooms;
 }
 public void setTotal_occupied_rooms(int total_occupied_rooms) {
-	this.total_occupied_rooms = total_occupied_rooms;
+	this.totalOccupiedRooms = total_occupied_rooms;
 }
 public int getEmpty_rooms() {
-	return empty_rooms;
+	return emptyRooms;
 }
 public void setEmpty_rooms(int empty_rooms) {
-	this.empty_rooms = empty_rooms;
+	this.emptyRooms = empty_rooms;
 }
 public LocalTime getOpenTime() {
 	return openTime;
@@ -145,10 +145,10 @@ public void setNo_of_available_maid(int no_of_available_maid) {
 		this.branch_id = id;
 	}
 	public String getBranch_Nme() {
-		return Branch_Name;
+		return BranchName;
 	}
 	public void setBranch_Nme(String branch_Nme) {
-		Branch_Name = branch_Nme;
+		BranchName = branch_Nme;
 	}
 	
 	 public Location getLocation() {
