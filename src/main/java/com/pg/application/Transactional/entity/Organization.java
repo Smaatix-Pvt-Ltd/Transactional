@@ -1,15 +1,18 @@
 package com.pg.application.Transactional.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Organization {
@@ -24,6 +27,19 @@ public class Organization {
 	private String email;
 	private String adminname;
 	
+//	@OneToMany(mappedBy = "organization", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<Branch> employees;
+	
+	
+	
+//	public List<Branch> getEmployees() {
+//		return employees;
+//	}
+//
+//	public void setEmployees(List<Branch> employees) {
+//		this.employees = employees;
+//	}
+
 	@Column(nullable = false, updatable = false)
     @CreationTimestamp
     private LocalDateTime createdAt;
